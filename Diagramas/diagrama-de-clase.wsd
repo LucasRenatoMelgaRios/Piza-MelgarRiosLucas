@@ -1,0 +1,48 @@
+@startuml xd
+class Usuario {
+  - idUsuario: int
+  - nombre: String
+  - apellidos: String
+  - dni: int
+  - direccion: String
+  - telefono: int
+  - password: String
+  - correo: String
+  _______________________
+  + registrarse(): void
+  + iniciarSesion(): void
+  + verOrdenesPasadas(): List<Orden>
+}
+
+class Producto {
+  - idProducto: int
+  - nombre: String
+  - precio: Decimal
+  - descripcion: String
+  - imagen: String
+  _______________________
+  + obtenerNombre(): String
+  + obtenerPrecio(): Decimal
+}
+
+class Orden {
+  - idOrden: int
+  - idProducto: int
+  - idUsuario: int
+  - createdAt: Date
+  - updatedAt: Date
+  _______________________
+  + calcularPrecioTotal(): Decimal
+}
+
+class ItemOrden {
+  - cantidad: int
+  - producto: Producto
+  _______________________
+  + obtenerSubtotal(): Decimal
+}
+
+Usuario "1" *-- "0..*" Orden
+Orden "1" *-- "*" ItemOrden
+Producto "1" -- "0..*" ItemOrden
+@enduml

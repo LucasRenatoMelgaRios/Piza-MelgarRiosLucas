@@ -1,0 +1,28 @@
+@startuml xd
+left to right direction
+skinparam packageStyle rectangle
+
+actor Cliente as cliente
+actor Sistema as sistema
+
+rectangle "Sistema de Pedido de Pizzas" {
+  usecase "Registro" as registro
+  usecase "Login" as login
+  usecase "Elegir Oferta" as elegirOferta
+  usecase "Confirmar Compra" as confirmarCompra
+  usecase "Ver Órdenes Pasadas" as verOrdenesPasadas
+
+  cliente -- registro
+  cliente -- login
+  cliente -- elegirOferta
+  cliente -- confirmarCompra
+  cliente -- verOrdenesPasadas
+
+  registro -- sistema
+  login -- sistema
+  elegirOferta -- sistema
+  confirmarCompra -- sistema
+  verOrdenesPasadas -- sistema
+}
+
+@enduml

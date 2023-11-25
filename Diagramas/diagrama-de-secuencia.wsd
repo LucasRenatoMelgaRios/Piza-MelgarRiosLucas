@@ -1,0 +1,27 @@
+@startuml xd
+!define CLIENT entity
+!define SYSTEM actor
+
+CLIENT -> SYSTEM: Registrarse
+SYSTEM --> CLIENT: Confirmación de registro
+
+CLIENT -> SYSTEM: Iniciar sesión
+SYSTEM --> CLIENT: Confirmación de inicio de sesión
+
+CLIENT -> SYSTEM: Elegir oferta
+SYSTEM --> CLIENT: Confirmación de elección de oferta
+
+CLIENT -> SYSTEM: Ir a confirmar compra
+SYSTEM --> CLIENT: Confirmación de navegación
+
+CLIENT -> SYSTEM: Ver detalles del pedido (precio, dirección, método de pago)
+SYSTEM --> CLIENT: Mostrar detalles del pedido
+
+CLIENT -> SYSTEM: Realizar pedido
+SYSTEM --> CLIENT: Confirmación de pedido
+
+CLIENT -> SYSTEM: Ver ordenes pasadas
+SYSTEM --> CLIENT: Mostrar historial de pedidos
+
+@enduml
+

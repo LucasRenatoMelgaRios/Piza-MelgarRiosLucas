@@ -1,0 +1,33 @@
+@startuml xd
+entity "Cliente" {
+  + ID
+  --
+  Nombre
+  Dirección
+  MétodoPago
+}
+
+entity "Oferta" {
+  + ID
+  --
+  Descripción
+  Precio
+}
+
+entity "Pedido" {
+  + ID
+  --
+  Fecha
+  Estado
+}
+
+entity "OrdenPasada" {
+  + ID
+  --
+  Fecha
+}
+
+Cliente --o{ Pedido : "Realiza"
+Pedido }o--o{ Oferta : "Contiene"
+Pedido }o--o{ OrdenPasada : "Relacionado"
+@enduml
