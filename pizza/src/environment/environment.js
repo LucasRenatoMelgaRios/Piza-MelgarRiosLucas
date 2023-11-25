@@ -5,3 +5,15 @@ export class Environment {
 
     // static tokenKey = "planta-de-la-vida-token";
 }
+
+/*
+    Ordenes del usuario 1:
+
+    https://pizza.rino101.com/api/ordern/index/1
+
+
+    Productos:
+
+    https://pizza.rino101.com/api/productos/index
+    
+*/
